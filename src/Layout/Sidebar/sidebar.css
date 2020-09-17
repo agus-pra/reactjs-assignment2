@@ -1,0 +1,18 @@
+.sidebar {
+  padding: 10px;
+  margin: 10px;
+  width: 20%;
+  background-image: linear-gradient(to right, #FDC830, #F37335);
+  height: 100vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  }
+
+.ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Img {
+  padding: 10px;
+}

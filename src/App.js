@@ -1,25 +1,72 @@
 import React from 'react';
-import logo from './logo.svg';
+import Sidebarmenu from './Layout/Sidebar/Sidebar';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import About from './pages/About';
+import Experience from './pages/Experience';
+import Education from './pages/Education';
+import Skills from './pages/Skills';
+import Interest from './pages/Interest';
+import Award from './pages/Award';
+
+
 
 function App() {
+
+  // ARRAY OF OBJECT
+  const routes = [
+    {
+      path: "/about",
+      main: () => <About />
+    },
+    {
+      path: "/experience",
+      main: () => <Experience />
+    },
+    {
+      path: "/education",
+      main: () => <Education />
+    },
+    {
+      path: "/skills",
+      main: () => <Skills />
+    },
+    {
+      path: "/interest",
+      main: () => <Interest />
+    },
+    {
+      path: "/award",
+      main: () => <Award />,
+    }
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      
+      <div style={{ display: "flex" }}>
+          <Sidebarmenu/>
+
+          <div style={{ flex: 1, padding: "10px" }}>
+            <Switch>
+              {routes.map((route, index) => (
+                // Render more <Route>s with the same paths as
+                // above, but different components this time.
+                <Route
+                  key={index}
+                  path={route.path}
+                  exact={route.exact}
+                  children={<route.main />}
+                />
+              ))}
+            </Switch>
+          </div>
+        </div>
+    </Router>
   );
 }
 
