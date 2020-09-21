@@ -1,4 +1,6 @@
 .sidebar {
+  height: 100%;
+  position: fixed;
   padding: 10px;
   margin: 10px;
   width: 20%;
@@ -10,7 +12,11 @@
 
 .ul {
   list-style-type: none;
-  padding: 0;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
 }
 
 .Img {

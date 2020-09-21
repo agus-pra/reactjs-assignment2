@@ -19,7 +19,7 @@ const Sidebarmenu = () => {
         <div>
           <ul className="ul">
                 <li>
-                  <Link to="/about">About</Link>
+                  <Link className="link" to="/about">About</Link>
                 </li>
                 <li>
                   <Link to="/experience">Experience</Link>

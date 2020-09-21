@@ -51,7 +51,7 @@ function App() {
       <div style={{ display: "flex" }}>
           <Sidebarmenu/>
 
-          <div style={{ flex: 1, padding: "10px" }}>
+          <div style={{ flex: 1, padding: "10px", marginLeft: "21%" }}>
             <Switch>
               {routes.map((route, index) => (
                 // Render more <Route>s with the same paths as
